@@ -1,4 +1,20 @@
+---
+title: "Meta-repository for Turner et al., 2021"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
 _your zenodo badge here_
+
+```{r}
+print("repo test")
+1+1
+```
+
 
 # lastname-etal_year_journal
 
