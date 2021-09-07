@@ -1,6 +1,6 @@
 ---
 title: "Meta-repository for Turner et al., 2021"
-output: md_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
