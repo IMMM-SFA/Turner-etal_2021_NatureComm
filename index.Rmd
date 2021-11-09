@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-**Wide disparities in potential contamination of water supplied to large United States cities**
+**Comparison of potential drinking water source contamination across one hundred U.S. cities**
 
 Sean W. D. Turner<sup>1\*</sup>, Jennie S. Rice<sup>1\*</sup>, Kristian D. Nelson<sup>1\*</sup>, Chris R. Vernon<sup>1\*</sup>, Ryan McManamay<sup>2\*</sup>, Kerim Dickson<sup>3\*</sup>, Landon Marston<sup>4\*</sup>
 
@@ -20,7 +20,7 @@ Sean W. D. Turner<sup>1\*</sup>, Jennie S. Rice<sup>1\*</sup>, Kristian D. Nelso
 \* corresponding author:  sean.turner@pnnl.gov
 
 ### Article
-Turner, S.W.D., Rice, J., Nelson, K., Vernon, C.,  McManamay, R.,  Dickson, K., and Marston, L. (in review). Wide disparities in potential contamination of water supplied ot large United States cities, *Nature Communications*.
+Turner, S.W.D., Rice, J., Nelson, K., Vernon, C.,  McManamay, R.,  Dickson, K., and Marston, L. (2021). Wide disparities in potential contamination of water supplied ot large United States cities, *Nature Communications*.
 
 ### Output data
 TBC
