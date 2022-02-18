@@ -1,5 +1,5 @@
 ---
-title: "Meta-repository for Turner et al., 2021"
+title: "Meta-repository for Turner et al., 2021 / 'Comparison of potential drinking water source contamination across one hundred U.S. cities'"
 output: html_document
 ---
 
@@ -8,8 +8,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-**Wide disparities in potential contamination of water supplied to large United States cities**
-
 Sean W. D. Turner<sup>1\*</sup>, Jennie S. Rice<sup>1\*</sup>, Kristian D. Nelson<sup>1\*</sup>, Chris R. Vernon<sup>1\*</sup>, Ryan McManamay<sup>2\*</sup>, Kerim Dickson<sup>3\*</sup>, Landon Marston<sup>4\*</sup>
 
 <sup>1 </sup> PNNL
@@ -17,29 +15,60 @@ Sean W. D. Turner<sup>1\*</sup>, Jennie S. Rice<sup>1\*</sup>, Kristian D. Nelso
 <sup>3 </sup> Kansas State
 <sup>4 </sup> Virginia Tech
 
-\* corresponding author:  sean.turner@pnnl.gov
+\* corresponding author: sean.turner@pnnl.gov
 
 ### Article
-Turner, S.W.D., Rice, J., Nelson, K., Vernon, C.,  McManamay, R.,  Dickson, K., and Marston, L. (in review). Wide disparities in potential contamination of water supplied ot large United States cities, *Nature Communications*.
-
-### Output data
-TBC
-
+Turner, S.W.D., Rice, J., Nelson, K., Vernon, C.,  McManamay, R.,  Dickson, K., and Marston, L. (2021). Comparison of potential drinking water contamination across one hundred U.S. cities, *Nature Communications* **12**, 7254. https://doi.org/10.1038/s41467-021-27509-9
 
 ### Contributing modeling software
 | model | Version | Repository Link | DOI |
-|-------|---------|-----------------|-----|
-| `gamut` | 0.1.0 | immm-sfa.github.io/gamut/ | TBC |
-
+|:------|:--------|:----------------|:----|
+| `gamut` | 0.1.0 | immm-sfa.github.io/gamut/ | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5590217.svg)](https://doi.org/10.5281/zenodo.5590217) |
 
 ### Input data
 | Dataset | Version | DOI |
-|-------|---------|-----------------|
+|:------|:--------|:----------------|
 | UWSCatCH | 1.0 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4315195.svg)](https://doi.org/10.5281/zenodo.4315195)|
 | Geospatial Input Datasets for Urban Teleconnections Analysis | 1.0 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4662993.svg)](https://doi.org/10.5281/zenodo.4662993)|
 
+### Results: PPCS metrics and water supply contributions for 116 cities
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5813878.svg)](https://doi.org/10.5281/zenodo.5813878)
+
+## Example: use `gamut` to compute PPCS and other metrics
+
+To download the `gamut` tool, use:
+
+```{r, eval=FALSE}
+devtools::install_github('IMMM-SFA/gamut')
+```
+
+If you have any trouble installing, please the instructions here: https://github.com/IMMM-SFA/gamut. Still no luck? Open an [issue](https://github.com/IMMM-SFA/gamut/issues).
+
+Next download the input data linked above ("Geospatial Input Datasets for Urban Teleconnections Analysis") and save to a local directory of your choice.
+
+```{r}
+my_gamut_data_dir <- "my_directory/Geospatial_Input_Datasets"
+```
 
 
-## Use `gamut` to compute Point PPCS and Nonpoint PPCS
-TBC
+```{r, show = FALSE, echo = FALSE}
+my_gamut_data_dir <- "../../../../Large data files/Geospatial_Input_Datasets/"
+```
 
+Here's an example for two cities:
+
+(Due to the high resolution of some of the geospatial data used in `gamut`, this may take several minutes!)
+
+```{r, warning = FALSE}
+library(gamut)
+count_watershed_teleconnections(
+  data_dir = my_gamut_data_dir,
+  cities = c("Portland | OR", "New York | NY")
+  ) -> city_metrics
+
+head(city_metrics)
+```
+
+
+
+Check [here](https://github.com/IMMM-SFA/gamut) for definitions of each metric.
