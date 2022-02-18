@@ -8,6 +8,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+**Comparison of potential drinking water source contamination across one hundred U.S. cities**
+
 Sean W. D. Turner<sup>1\*</sup>, Jennie S. Rice<sup>1\*</sup>, Kristian D. Nelson<sup>1\*</sup>, Chris R. Vernon<sup>1\*</sup>, Ryan McManamay<sup>2\*</sup>, Kerim Dickson<sup>3\*</sup>, Landon Marston<sup>4\*</sup>
 
 <sup>1 </sup> PNNL
@@ -68,7 +70,5 @@ count_watershed_teleconnections(
 
 head(city_metrics)
 ```
-
-
 
 Check [here](https://github.com/IMMM-SFA/gamut) for definitions of each metric.
